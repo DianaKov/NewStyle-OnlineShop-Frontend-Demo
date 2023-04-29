@@ -1,0 +1,40 @@
+.modal{
+  top: 15%;
+}
+.modal-content{
+  padding: 3%;
+}
+
+.center{
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+  
+.modal-footer .btn-primary {
+  background-color: var(--header-background-color);
+  border-color: var(--header-background-color);
+  margin: 0 auto;
+  display: block;
+}
+
+.password-icon{
+  margin-left: -6%;
+    margin-top: 2%;
+}
+.password-input-wrapper{
+  display: flex;
+}
+.form-group{
+  margin: 0 !important;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+@media screen and (min-width: 992px) {
+  .faUserText{
+      display:none;
+  }
+}

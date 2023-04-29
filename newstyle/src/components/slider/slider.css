@@ -1,0 +1,474 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 5% 30%;
+  }
+
+  .circle-left {
+    position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 18%;
+  background-color: rgba(62, 169, 176, 0.56);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.circle-right {
+position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #1E9992;
+  border-radius: 50%;
+  z-index: 1;
+  left: 30%;
+  clip: rect(0px, 100px, 100px, 0px);
+}
+@keyframes circle-left-animation {
+0% {
+  transform: translateY(-150%);
+}
+100% {
+  transform: translateY(0);
+}
+0% {
+  transform: scale(0.5);
+}
+100% {
+  transform: scale(1.2);
+}
+}
+
+/* Анимация для круга справа */
+@keyframes circle-right-animation {
+0% {
+  transform: translateY(-150%) rotateZ(180deg);
+}
+100% {
+  transform: translateY(0) rotateZ(0deg);
+}
+0% {
+  transform: scale(0.5);
+}
+100% {
+  transform: scale(1.2);
+}
+}
+
+.circle-left {
+    animation: circle-left-animation 1s cubic-bezier(0.14, 1.03, 0.51, -0.4) forwards infinite;
+  }
+  
+  .circle-right {
+    animation: circle-right-animation 2s cubic-bezier(0.51, 1.19, 0.93, -0.15) forwards infinite;
+  }
+  
+  
+      .text {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+        font-family: 'Lato';
+        font-style: italic;
+        font-weight: bold;
+        z-index: 3;
+  }
+      
+  
+      .letter {
+        opacity: 0;
+        animation: drop 1s forwards ease infinite;
+      }
+  
+  
+  @keyframes appear-from-top {
+    0% {
+      transform: translate(0px, -50px);
+      opacity: 0;
+    }
+    30% {
+      transform: translate(0px, 0);
+      opacity: 1;
+    }
+    70% {
+      transform: translate(0px, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(0px, -50px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes appear-from-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    30% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    70% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+  }
+  
+  @keyframes appear-from-right {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    30% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    70% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+  }
+  
+  @keyframes appear-from-bottom {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    30% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    70% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  }
+  
+  .letter.n {
+    animation: appear-from-top 6s infinite;
+  }
+  
+  
+  .letter.e {
+    animation: appear-from-left 6s infinite;
+  }
+  
+  .letter.w {
+    animation: appear-from-left 6s infinite;
+  }
+  
+  .letter.s {
+    animation: appear-from-bottom 6s infinite;
+  }
+  
+  .letter.t {
+    animation: appear-from-right 6s infinite;
+  }
+  
+  .letter.y {
+    animation: appear-from-right 6s infinite;
+  }
+  
+  .letter.l {
+    animation: appear-from-bottom 6s infinite;
+  }
+  
+  .letter.e:last-child {
+    animation: appear-from-top 6s infinite;
+  }
+
+
+
+
+      .ball {
+          position: absolute;
+          border-radius: 50%;
+          animation: move-ball linear infinite 3s;
+          animation-duration: 2.5s;
+          opacity: 1;
+          animation-fill-mode: forwards;
+      }
+
+      .ball-1 {
+          width: 50px;
+          height: 50px;
+          background-color: red;
+          animation-duration: 2s;
+          animation-delay: 0.5s;
+          --x: 5;
+          --y: 2;
+          animation-delay: calc(-1s * var(--t));
+      }
+
+      .ball-2 {
+          width: 30px;
+          height: 30px;
+          background-color: blue;
+          animation-duration: 0.5s;
+          animation-delay: 1s;
+          --x: -8;
+          --y: -6;
+          animation-delay: calc(-1s * var(--t));
+      }
+
+      .ball-3 {
+          width: 20px;
+          height: 20px;
+          background-color: green;
+          animation-duration: 0.8s;
+          animation-delay: 1.5s;
+          --x: 3;
+          --y: 8;
+          animation-delay: calc(-1s * var(--t));
+      }
+
+      .ball-4 {
+          width: 40px;
+          height: 40px;
+          background-color: yellow;
+          --x: -4;
+          --y: -3;
+          animation-delay: calc(-1s * var(--t));
+      }
+
+      .ball-5 {
+          width: 25px;
+          height: 25px;
+          background-color: orange;
+          --x: 6;
+          --y: 9;
+          animation-delay: calc(-1s * var(--t));
+      }
+
+      .ball-6 {
+          width: 15px;
+          height: 15px;
+          background-color: purple;
+          --x: -2;
+          --y: -5;
+          animation-delay: calc(-1s * var(--t));
+      }
+
+      .ball-7 {
+          width: 40px;
+          height: 40px;
+          background-color: purple;
+          --x: -4;
+          --y: -9;
+          animation-delay: calc(-1s * var(--t));
+      }
+
+      .ball-8 {
+          width: 20px;
+          height: 20px;
+          background-color: orange;
+          --x: 2;
+          --y: 5;
+          animation-delay: calc(-1s * var(--t));
+      }
+
+      .ball-9 {
+          width: 30px;
+          height: 30px;
+          background-color: yellow;
+          --x: -6;
+          --y: -3;
+          animation-delay: calc(-1s * var(--t));
+      }
+
+      .ball-10 {
+          width: 60px;
+          height: 60px;
+          background-color: pink;
+          --x: 1;
+          --y: 8;
+          animation-delay: calc(-1s * var(--t));
+      }
+
+      .ball-11 {
+          width: 15px;
+          height: 15px;
+          background-color: brown;
+          --x: -3;
+          --y: -1;
+          animation-delay: calc(-1s * var(--t));
+      }
+
+      .ball-12 {
+          width: 25px;
+          height: 25px;
+          background-color: turquoise;
+          --x: 9;
+          --y: 4;
+          animation-delay: calc(-1s * var(--t));
+      }
+
+      .ball-13 {
+          width: 35px;
+          height: 35px;
+          background-color: silver;
+          --x: 7;
+          --y: 2;
+          animation-delay: calc(-1s * var(--t));
+      }
+
+      .ball-14 {
+          --x: 2;
+          --y: 5;
+          animation-delay: calc(-1s * var(--t));
+          width: 25px;
+          height: 25px;
+          background-color: orange;
+          animation-duration: 0.7s;
+      }
+
+      .ball-15 {
+          --x: 7;
+          --y: 1;
+          animation-delay: calc(-1s * var(--t));
+          width: 35px;
+          height: 35px;
+          background-color: purple;
+          animation-duration: 1.3s;
+      }
+
+      .ball-16 {
+          --x: 1;
+          --y: 9;
+          animation-delay: calc(-1s * var(--t));
+          width: 20px;
+          height: 20px;
+          background-color: yellow;
+          animation-duration: 0.8s;
+      }
+
+      .ball-17 {
+          --x: 0.9;
+          --y: 0.3;
+          animation-delay: calc(-1s * var(--t));
+          width: 40px;
+          height: 40px;
+          background-color: pink;
+          animation-duration: 1.5s;
+      }
+
+      .ball-18 {
+          --x: 0.3;
+          --y: 0.1;
+          animation-delay: calc(-1s * var(--t));
+          width: 30px;
+          height: 30px;
+          background-color: cyan;
+          animation-duration: 1.1s;
+      }
+
+      .ball-19 {
+          --x: 0.8;
+          --y: 0.8;
+          animation-delay: calc(-1s * var(--t));
+          width: 25px;
+          height: 25px;
+          background-color: magenta;
+          animation-duration: 0.9s;
+      }
+
+      .ball-20 {
+          --x: 0.6;
+          --y: 0.4;
+          animation-delay: calc(-1s * var(--t));
+          width: 20px;
+          height: 20px;
+          background-color: lime;
+          animation-duration: 0.6s;
+      }
+
+      @keyframes move-ball {
+0% {
+  transform: translate(0, 0);
+}
+50% {
+  transform: translate(
+    calc(-100% + 100px * var(--x)),
+    calc(-100% + 100px * var(--y))
+  );
+}
+100% {
+  transform: translate(0, 0);
+}
+}
+.ball.stop {
+    animation-play-state: paused;
+    opacity: 0;
+  }
+
+  @keyframes ball-animation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+      .slider {
+        width: 95%;
+        margin: 2% auto;
+        height: 80vh;    
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+      
+      .slide.active {
+        opacity: 1;
+      }
+      
+      .slide-1 {
+        background-image: linear-gradient(45deg, #66afb1, #f3e7e3, #66afb1);
+      }
+      
+  
+      
+      /* Добавьте ваш стиль анимации для логотипа */
+      
+      .slide-2 {
+        background-color: #fff; /* установите цвет фона вашего второго слайда */
+      }
+      
+      .slide-2 img, .slide-3 img, .slide-4 img {
+        width: 100%;
+        height: auto;
+      }
+      

@@ -1,0 +1,22 @@
+.modal-header{
+  display: block;
+} 
+  .titleContainer {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  .closeContainer {
+    text-align: end;
+    cursor: pointer;
+  }
+  
+  .closeIcon {
+    color: rgba(45, 155, 170, 0.5) !important;
+    font-size: 28px;
+  }
+  

@@ -1,0 +1,99 @@
+.navbar{
+  font-family: var(--font-family-header);
+  font-style: normal;
+  font-weight: bold;
+  box-shadow: 0px 4px 4px 0px var(--grey);
+}
+
+.navbar-brand{
+  position: absolute;
+  left: 50%;
+  color: var(--black);
+  font-size: 36px;
+  margin-left: -7%;
+}
+
+.navbar-toggler {
+  width: 40px; 
+  height: 40px;
+  padding: 0;
+}
+
+.navbar-expand .navbar-toggler {
+  display: block;
+  outline: none;
+}
+
+.navbar-collapse {
+  transition: none;
+}
+
+.navbar-toggler.collapsed {
+  outline: none;
+}
+
+
+.navbar-toggler:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.navbar-expand .navbar-collapse {
+  justify-content: space-between;
+}
+
+.navbar-expand .navbar-nav {
+  padding-left: 7%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--black);
+}
+
+.search-input-container {
+  position: relative;
+}
+
+.search-input-container .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.search-input-container .clear-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.search-input {
+  padding-left: 40px; 
+  padding-right: 40px; 
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+  color: var(--black);
+}
+
+.navbar  .navbar-brand:hover, .navbar:hover .nav-link:hover  {
+  color:var(--grey);
+}
+
+svg:not(:root).svg-inline--fa:hover,
+svg:not(:host).svg-inline--fa:hover {
+  color: var(--grey);
+}
+
+@media (min-width: 1200px){
+  .container {
+      max-width: none;
+      margin: 0 5%;
+  }
+}
