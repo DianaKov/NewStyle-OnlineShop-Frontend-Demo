@@ -9,28 +9,49 @@ import ModalRegistration from '../modalAccount/modalRegistrationStep1';
 const ModalAuthorization = ({ showModal, handleCloseModal, handleForgotPassword, handleRegister }) => {
 
     const [showPassword, setShowPassword] = useState(false);
-    const [showRegistrationModal, setShowRegistrationModal] = useState(false); // Добавлено состояние для отображения/скрытия модального окна "Регистрация"
+    const [showRegistrationModal, setShowRegistrationModal] = useState(false); 
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     const handleTogglePassword = () => setShowPassword(!showPassword);
 
     const handleOpenRegistrationModal = () => {
         setShowRegistrationModal(true);
-        handleCloseModal(); // Закрытие модального окна "Авторизация"
     }
 
     const handleCloseRegistrationModal = () => {
         setShowRegistrationModal(false);
     }
 
+    const handleSubmit = async () => {
+        try {
+            const requestOptions = await fetch('http://localhost:8080/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+            const data = await requestOptions.json(); 
+            if (!requestOptions.ok) {
+                throw new Error(data.message);
+            } else {
+                handleCloseModal(); 
+            }  
+        } catch (error) {
+            console.error('Произошла ошибка при авторизации:', error);
+            alert('Произошла ошибка при авторизации');
+        }
+    }
+    
+    
+
     return (
         <>
-            {/* Модальное окно "Авторизация" */}
             <Modal show={showModal} onHide={handleCloseModal}>
                 <HeaderModal className='modal-title ' title="Авторизация" handleCloseModal={handleCloseModal} />
                 <Modal.Body>
-                    <Form>
-                        <EmailModale />
-                        <PasswordModale handleTogglePassword={handleTogglePassword} showPassword={showPassword} />
+                    <Form >
+                        <EmailModale onChange={setEmail} />
+                        <PasswordModale onChange={setPassword} handleTogglePassword={handleTogglePassword} showPassword={showPassword} />
                         <Container className='form-group'>
                             <Form.Text className="text-muted">
                                 <Button variant="link" onClick={() => { handleForgotPassword(); }}>
@@ -45,10 +66,8 @@ const ModalAuthorization = ({ showModal, handleCloseModal, handleForgotPassword,
                         </Container>
                     </Form>
                 </Modal.Body>
-                <FooterModale title="Войти" />
+                <FooterModale title="Войти" onClick={handleSubmit}/>
             </Modal>
-
-            {/* Модальное окно "Регистрация" */}
             <ModalRegistration showModal={showRegistrationModal} handleCloseModal={handleCloseRegistrationModal} />
         </>
     );

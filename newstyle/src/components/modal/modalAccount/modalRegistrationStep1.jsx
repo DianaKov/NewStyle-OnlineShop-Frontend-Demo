@@ -16,12 +16,11 @@ const ModalRegistration = ({ showModal, handleCloseModal }) => {
 
     const handleOpenSecondModal = async () => {
         try {
-            // Исправляем URL для запроса
             const response = await fetch('http://localhost:8080/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': 'http://localhost:3000'
+                    'Access-Control-Allow-Origin': 'http://localhost:3001'
                 },
                 body: JSON.stringify({ email, password })
             });
@@ -33,21 +32,15 @@ const ModalRegistration = ({ showModal, handleCloseModal }) => {
             }
 
             if (response.ok) {
-                // Сначала открываем второе модальное окно
                 setShowSecondModal(true);
-                // Закрываем первое модальное окно
                 handleCloseModal();
             } else {
                 const errorData = await response.json();
-                // Добавляем более подробное описание ошибки в вывод
                 console.error('Ошибка при регистрации пользователя:', errorData.message);
-                // Заменяем alert на вывод ошибки в модальном окне
                 alert('Произошла ошибка при регистрации');
             }
         } catch (error) {
-            // Добавляем более подробное описание ошибки в вывод
             console.error('Ошибка при регистрации пользователя:', error);
-            // Заменяем alert на вывод ошибки в модальном окне
             alert('Произошла ошибка при регистрации');
         }
     };
