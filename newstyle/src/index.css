@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Raleway';
+    font-style: normal;
 }
 
 code {
@@ -21,4 +23,9 @@ code {
   --black: #000;
   --light-gray: #ccc;
   --floralwhite: floralwhite;
+  --footer-background-color: rgba(60, 60, 60, 0.5);
+  --footer-color: #212529;
+  --hover-btn: rgba(4, 118, 133, 0.77);
+  --mailingList-backgraund: rgba(45, 155, 170, 0.08);
+  --sale-color: rgba(242, 100, 100, 0.8);
 }

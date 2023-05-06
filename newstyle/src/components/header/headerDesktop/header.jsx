@@ -34,12 +34,12 @@ function Header() {
         <Navbar.Collapse id="navbarMenu" className={isExpanded ? "show" : ""}>
           {showNavLinks && (
             <Nav className="d-none d-lg-flex">
-              <Nav.Link href="#">NEW</Nav.Link>
-              <Nav.Link href="#">КАТАЛОГ</Nav.Link>
-              <Nav.Link href="#">АКЦИИ</Nav.Link>
+              <Nav.Link href="/catalog?category=new_arrival">NEW</Nav.Link>
+              <Nav.Link href="/catalog">КАТАЛОГ</Nav.Link>
+              <Nav.Link href="/stock">АКЦИИ</Nav.Link>
             </Nav>
           )}
-          {showLogo && <Navbar.Brand href="#">NEW STYLE</Navbar.Brand>}
+          {showLogo && <Navbar.Brand href="/">NEW STYLE</Navbar.Brand>}
           <Nav className={isExpanded ? "d-none" : "ms-auto"}>
             {showNavLinks && (
             <div className="position-relative d-flex align-items-center">
@@ -73,9 +73,10 @@ function Header() {
             </Nav.Link>
           </Nav>
           <Nav className={isExpanded ? "me-auto mb-2 mb-lg-0" : "d-none"}>
-            <Nav.Link href="#">ОПЛАТА И ДОСТАВКА</Nav.Link>
-            <Nav.Link href="#">УСЛОВИЯ ВОЗВРАТА</Nav.Link>
-            <Nav.Link href="#">КОНТАКТЫ</Nav.Link>
+            <Nav.Link href="/about">О НАС</Nav.Link>
+            <Nav.Link href="/payment">ОПЛАТА И ДОСТАВКА</Nav.Link>
+            <Nav.Link href="/return-conditions">УСЛОВИЯ ВОЗВРАТА</Nav.Link>
+            <Nav.Link href="/contact">КОНТАКТЫ</Nav.Link>
           </Nav>
           
         </Navbar.Collapse>

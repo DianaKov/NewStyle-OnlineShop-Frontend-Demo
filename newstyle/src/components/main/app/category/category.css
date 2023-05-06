@@ -1,0 +1,32 @@
+.card{
+    border: none;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.card-name{
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    padding-left: 1%;
+}
+
+.card-btn{
+    height: 70px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: var(--header-background-color);
+    backdrop-filter: blur(3px);
+    border: var(--header-background-color);
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+}
+
+.card-btn:hover{
+    background: var(--hover-btn);
+    border: var(--hover-btn);
+}

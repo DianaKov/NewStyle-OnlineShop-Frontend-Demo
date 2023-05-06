@@ -1,0 +1,32 @@
+.footer{
+    background-color: var(--footer-background-color);
+    display: flex;
+    justify-content: space-around;
+    padding: 2% 0;
+    color: var(--footer-color);
+    margin-top:2%;
+}
+
+.footer-left{
+    text-align: center;
+}
+
+.footer-left img{
+    margin: 15% 0;
+}
+
+.footer-links{
+    display: block;
+}
+
+.footer-link{
+    padding: 0;
+    padding-top: 11%;
+    color: var(--footer-color);
+}
+
+.footer-link:hover{
+    color:var(--black);
+    transform: scale(1.2);
+    text-align: center;
+}

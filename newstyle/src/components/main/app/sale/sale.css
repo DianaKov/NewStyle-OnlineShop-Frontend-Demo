@@ -1,0 +1,52 @@
+.container{
+    margin: auto;
+    width: 90%;
+    padding: 0;
+}
+
+.card-sale{
+    display:flex;
+}
+
+.card-sale__left{
+    padding: 0 5%;
+}
+
+.card-sale__left h2{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 3;
+}
+
+.card-sale__left div{
+    width: 70%;
+    font-size: 24px;
+}
+
+.card-sale__left .card-btn{
+    position: relative;
+    width: 50%;
+    margin-top: 5%;
+}
+
+.card-img__sale{
+    display: grid;
+    position: absolute;
+    width: 25%;
+    height: 13%;
+    top: 5%;
+    right: 5%;
+    background: var(--sale-color);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    border: var(--sale-color);
+    font-weight: 800;
+    font-size: 22px;
+    text-align: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.text-muted{
+    text-decoration: line-through;
+}

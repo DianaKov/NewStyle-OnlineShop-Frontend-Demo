@@ -1,0 +1,21 @@
+.bredcrumbs{
+    width: 87%;
+    margin: 0 auto;
+    padding-top: 1%;
+    color: rgba(45, 155, 170, 1);
+}
+
+.bredcrumbs span a{
+    color:var(--footer-color);
+}
+
+.breadcrumb-separator {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+.filterProducts__left{
+    display: grid;
+    width: 10%;
+    height: 40%;
+}

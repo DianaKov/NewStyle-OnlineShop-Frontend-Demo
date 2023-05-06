@@ -1,0 +1,77 @@
+.mailingList-container{
+    background-color: var(--mailingList-backgraund);
+    display: flex;
+    justify-content: space-around;
+    padding: 2% 0;
+    margin: 6%;
+    align-items: center;
+}
+
+.mailingList-container div{
+    display:block;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .checkbox-input {
+    opacity: 0;
+    position: absolute;
+    height: 5%;
+    width: 5%;
+    z-index: 5;
+  }
+  
+  .checkbox-label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+  }
+  
+  .checkbox-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+    background-color: var(--white);
+  }
+  
+  .checkbox-input:checked ~ .checkbox-label::before {
+    background-color: var(--header-background-color);
+    border: var(--header-background-color);
+  }
+  
+  .checkbox-label::after {
+    content: '\2713';
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    font-size: 18px;
+    color: var(--white);
+    display: none;
+  }
+  
+  .checkbox-input:checked ~ .checkbox-label::after {
+    display: block;
+  }
+  
+.mailingList-btn{
+    background-color: var(--header-background-color);
+    border: var(--header-background-color)
+}
+
+.mailingList-btn:hover{
+    background-color: var(--hover-btn);
+    border: var(--hover-btn);
+}

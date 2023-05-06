@@ -1,0 +1,100 @@
+.catalogPage{
+    width:87%;
+}
+
+.catalogPage__title{
+    display: flex;
+}
+
+.catalogPage__title h1{
+    font-size: 20px;
+    margin-right: 7%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.catalogPage__title .form-control{
+    border: none;
+    margin: 0.5% 2%;
+    width: auto;
+}
+
+.row{
+    width: 100%;
+    margin-left: auto;
+}
+
+
+.filterProducts{
+    display:flex;
+    justify-content: space-between;
+}
+  
+.filterProducts__right{
+    width:90%;
+}
+
+.mb-4{
+    margin: 0;
+    margin-left: auto;
+}
+
+.card-img-top{
+    width:80%;
+}
+
+.no-product{
+    margin: 7% 10%;
+    font-size: 20px;
+}
+
+.btn-outline-primary{
+    color: var(--black);
+    border: none;
+    text-align: left;
+}
+
+.btn-outline-primary:hover{
+    color: var(--white);
+    background-color: var(--light-gray);
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active{
+    color: var(--white);
+    background-color: var(--light-gray);
+    border:none;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus, .btn-outline-primary:not(:disabled):not(.disabled):active:focus{
+    box-shadow: none;
+    background-color: var(--light-gray);
+    border:none;
+}
+
+.product-color {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-left: 2%;
+  vertical-align: middle;
+}
+
+.card-body {
+    text-align: center;
+    width: 80%;
+}
+.card-title, .card-text{
+    margin: 0;
+}
+
+.mb-4 .card-img__sale{
+    width: 20%;
+    height: 12%;
+    top: 5%;
+    right: 24%;
+}
+
+.pagination{
+    justify-content: center;
+}

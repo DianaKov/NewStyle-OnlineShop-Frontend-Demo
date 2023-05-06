@@ -5,17 +5,20 @@ const EmailModale = ({ onChange }) => {
   const [emailError, setEmailError] = useState('');
 
   const handleEmailChange = (e) => {
-    const email = e.target.value;
-    onChange(email);
-
-    // Проверяем введенный email на соответствие шаблону
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setEmailError('Введите корректный e-mail');
-    } else {
-      setEmailError('');
+    if (e.target && e.target.value) {
+      const email = e.target.value;
+      onChange(email);
+  
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        setEmailError('Введите корректный e-mail');
+      } else {
+        setEmailError('');
+      }
     }
   };
+  
+  
 
   return (
     <Form.Group controlId="formEmail">

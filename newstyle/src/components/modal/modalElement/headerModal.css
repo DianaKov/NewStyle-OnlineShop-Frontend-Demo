@@ -16,7 +16,7 @@
   }
   
   .closeIcon {
-    color: rgba(45, 155, 170, 0.5) !important;
+    color: var(--header-background-color) !important;
     font-size: 28px;
   }
   
