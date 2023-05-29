@@ -1,0 +1,17 @@
+.card-container{
+    width: 87%;
+    margin: 0 auto;
+    padding-top: 3%;
+}
+
+.card-group{
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.card-group div{
+    flex: 1;
+    padding: 1%;
+    padding-bottom: 0;
+}

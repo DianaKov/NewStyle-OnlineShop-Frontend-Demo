@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Card, Button, Container, Row, Col, Form, FormGroup} from "react-bootstrap";
+import { Button, Container, Row, Col, Form, FormGroup} from "react-bootstrap";
 import { useLocation,  useNavigate } from 'react-router-dom';
+import { salePercentage, colorMap } from '../../constants';
+
 import Breadcrumbs from '../breadcrumbs/breadcrumbs';
 import NewHeader from '../../header/header';
 import Footer from '../../footer/footer';
+import ProductItem from "../productPage/productItem";
 
 import './catalog.css'
 
 const CatalogPage = () => {
 
   const navigate = useNavigate();
+  const { pathname } = useLocation();
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState("");
   const [size, setSize] = useState(null);
@@ -89,25 +93,10 @@ const CatalogPage = () => {
     return filterProducts().slice(startIndex, endIndex);
   };
 
-  const { pathname } = useLocation();
-
-  const colorMap = {
-    "черный": "black",
-    "красный": "red",
-    "синий": "blue",
-    "серый": "grey",
-    "голубой": "lightblue",
-    "сиреневый": "purple",
-    "зеленый": "green",
-    "желтый" : "yellow"
-  }
-  
-  const salePercentage = 50;
-
   return (
     <>
     <NewHeader/>
-    <Breadcrumbs path={pathname} />
+    <Breadcrumbs path={pathname} category={category}/>
     <Container className="catalogPage">
       <FormGroup className="catalogPage__title">
         <h1>Каталог</h1>
@@ -137,6 +126,7 @@ const CatalogPage = () => {
               <option value="голубой">Голубой</option>
               <option value="сиреневый">Сиреневый</option>
               <option value="желтый">Желтый</option>
+              <option value="коралловый">Коралловый</option>
         </Form.Control>
       </FormGroup>
       <div className="filterProducts">
@@ -170,33 +160,13 @@ const CatalogPage = () => {
         ) : (
           getPaginatedProducts().map((product) => (
             <Col key={product.id} md={4}>
-              <Card className="mb-4">
-              {product.sale ? (
-                <>
-                  <Card.Img variant="top" src={`http://localhost:8080/${product.imagePath}`} />
-                  <div className={`card-img__sale card-img__sale--${salePercentage}%`}>
-                    -{salePercentage}%
-                  </div>
-                </>
-              ) : (
-                <Card.Img variant="top" src={`http://localhost:8080/${product.imagePath}`} />
-              )}
-                <Card.Body>
-                  <Card.Title>{product.name}</Card.Title>
-                  <Card.Text>
-                  {product.sale ? (
-                    <strong>{product.price * salePercentage / 100} грн <span as="span" className="text-muted">{product.price} грн</span></strong>
-                  ) : (
-                    <strong>{product.price} грн</strong>
-                  )}
-                  </Card.Text>
-                  <Card.Title>Размер: {product.size}</Card.Title>
-                  <Card.Title>
-                    Цвет:
-                    <span className="product-color" style={{ backgroundColor: colorMap[product.color] }}></span>
-                  </Card.Title>
-                </Card.Body>
-              </Card>
+              <ProductItem
+                product={product}
+                salePercentage={salePercentage}
+                colorMap={colorMap}
+                showDescription={false}
+                showButtons={false}
+              />
             </Col>
           ))
         )}
@@ -221,4 +191,5 @@ const CatalogPage = () => {
       </>
       );
     }
+
 export default CatalogPage;

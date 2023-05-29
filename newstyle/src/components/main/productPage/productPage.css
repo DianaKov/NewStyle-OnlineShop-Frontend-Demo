@@ -1,0 +1,34 @@
+.productPage .mb-4 {
+    flex-direction: row;
+    margin: auto;
+    width: 87%;
+    padding-top: 1%;
+}
+
+.productPage--left{
+    width: 32%;
+}
+
+.productPage--right{
+    width: 68%;
+}
+
+.productPage--left .card-img__sale{
+    width: 6%;
+    height: 14%;
+    top: 10%;
+    left: 18%;
+}
+
+.productPage--right .card-title{
+    line-height: 35px;
+}
+
+.productPage--right .card-body{
+    text-align: start;
+    padding: 0;
+}
+
+.mailingList-btn{
+    margin-right: 2%;
+}

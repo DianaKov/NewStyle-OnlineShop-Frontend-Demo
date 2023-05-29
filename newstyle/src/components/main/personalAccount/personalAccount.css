@@ -1,0 +1,12 @@
+.profile-card .card-btn{
+    position: inherit;
+    width: max-content;
+    margin-top: 3%;
+}
+
+.profile-info{
+    border: 2px solid var(--hover-btn);
+    width: 40%;
+    margin-top: 1%;
+    padding: 1%;
+}

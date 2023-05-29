@@ -67,8 +67,9 @@
   }
   
 .mailingList-btn{
-    background-color: var(--header-background-color);
-    border: var(--header-background-color)
+  width:250px;
+  background-color: var(--header-background-color);
+  border: var(--header-background-color)
 }
 
 .mailingList-btn:hover{

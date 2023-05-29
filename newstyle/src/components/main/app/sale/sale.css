@@ -8,10 +8,6 @@
     display:flex;
 }
 
-.card-sale__left{
-    padding: 0 5%;
-}
-
 .card-sale__left h2{
     font-size: 36px;
     font-weight: 600;
@@ -26,7 +22,7 @@
 .card-sale__left .card-btn{
     position: relative;
     width: 50%;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .card-img__sale{
@@ -49,4 +45,8 @@
 
 .text-muted{
     text-decoration: line-through;
+}
+
+h1{
+    border-bottom: 5px solid var(--header-background-color);
 }

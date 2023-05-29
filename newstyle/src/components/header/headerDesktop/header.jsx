@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Navbar, Container, Nav, Form, FormControl } from "react-bootstrap";
+import { Navbar, Container, Nav} from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faShoppingCart, faSearch, faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faShoppingCart, faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 import MyModal from "../../modal/modal";
 
 import "./header.css"
+import SearchForm from "../../searchForm/searchForm";
 
 function Header() {
   
@@ -36,39 +37,17 @@ function Header() {
             <Nav className="d-none d-lg-flex">
               <Nav.Link href="/catalog?category=new_arrival">NEW</Nav.Link>
               <Nav.Link href="/catalog">КАТАЛОГ</Nav.Link>
-              <Nav.Link href="/stock">АКЦИИ</Nav.Link>
+              <Nav.Link href="/catalog?category=sale">СКИДКИ</Nav.Link>
             </Nav>
           )}
           {showLogo && <Navbar.Brand href="/">NEW STYLE</Navbar.Brand>}
           <Nav className={isExpanded ? "d-none" : "ms-auto"}>
-            {showNavLinks && (
-            <div className="position-relative d-flex align-items-center">
-              <div className="d-grid">
-                <Form className={(!showInput && "d-flex") || "d-none"}>
-                  <div
-                    className="search-input-container d-flex justify-content-center align-items-center"
-                    onClick={() => setShowInput(true)}
-                    style={{ marginRight: "35px" }}
-                  >
-                    <FontAwesomeIcon icon={faSearch} className="search-icon" />
-                  </div>
-                </Form>
-                <Form className={(showInput && "d-flex") || "d-none"}>
-                  <div className="search-input-container d-flex justify-content-center align-items-center">
-                    <FontAwesomeIcon icon={faSearch} className="search-icon" />
-                    <FormControl  type="search" placeholder="Search..." className="search-input me-2" aria-label="Search" />
-                    <FontAwesomeIcon icon={faTimes} onClick={() => setShowInput(false)} className="clear-icon"
-                      style={{ cursor: "pointer" }} />
-                  </div>
-                </Form>
-              </div>
-            </div>
-            )}
+            <SearchForm />
             <MyModal />
-            <Nav.Link href="#">
+            <Nav.Link href="/favorites">
               <FontAwesomeIcon icon={faHeart} />
             </Nav.Link>
-            <Nav.Link href="#">
+            <Nav.Link href="/shoppingCart">
               <FontAwesomeIcon icon={faShoppingCart} />
             </Nav.Link>
           </Nav>

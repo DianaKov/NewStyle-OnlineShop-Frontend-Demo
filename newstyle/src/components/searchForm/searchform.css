@@ -1,0 +1,14 @@
+.searchProductList{
+    display: grid;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    background-color: #eaeaea;
+    width: 25%;
+    margin: 1%;
+    padding: 1%;
+}
+
+.searchProductList a{
+    color:black;
+}

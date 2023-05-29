@@ -93,6 +93,7 @@
     height: 12%;
     top: 5%;
     right: 24%;
+    color: var(--black);
 }
 
 .pagination{

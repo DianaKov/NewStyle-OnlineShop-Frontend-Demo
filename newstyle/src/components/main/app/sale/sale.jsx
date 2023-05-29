@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Card, Button, Row, Col} from "react-bootstrap";
+import { salePercentage } from '../../../constants';
+
 import './sale.css';
 
 
@@ -42,15 +44,13 @@ const SaleCategory = () => {
     }, {});
     return Object.values(uniqueProductsByCategory);
   };
-  
-  const salePercentage = 50;
 
   return (
-    <>
-    <h1 className="card">Акции</h1>
+    <div className="card">
+    <h1 className="card-name">Акции</h1>
     <Container className="card-sale">
       <Container className="card-sale__left">
-        <h2>ЛЕТНИЕ СКИДКИ -50%</h2>
+        <h2>ЛЕТНИЕ СКИДКИ -{salePercentage}%</h2>
         <div>Наша летняя распродажа уже заканчивается. Поспешите воспользоваться самыми 
           горячими ценами.</div>
         <Button className="card-btn" onClick={() => window.location.assign('http://localhost:3000/catalog?category=sale')}>{category}Перейти</Button>
@@ -68,7 +68,7 @@ const SaleCategory = () => {
                 <Card.Body>
                     <Card.Title>{product.name}</Card.Title>
                     <Card.Text>
-                    <strong>{product.price * salePercentage / 100} грн <span as="span" className="text-muted">{product.price} грн</span></strong>
+                    <strong>{product.price - (product.price * salePercentage / 100)} грн <span as="span" className="text-muted">{product.price} грн</span></strong>
                     </Card.Text>
               </Card.Body>
               </Card>
@@ -77,7 +77,7 @@ const SaleCategory = () => {
         </Row>
       </Container>
     </Container>
-    </>
+    </div>
   );
 };
 

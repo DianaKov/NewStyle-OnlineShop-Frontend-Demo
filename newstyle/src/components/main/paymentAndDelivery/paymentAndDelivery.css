@@ -1,0 +1,28 @@
+.card-group__left{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-group__left>p{
+    flex:1.5;
+    margin:0;
+    padding-left: 1%;
+}
+
+.card-group__left>p:nth-child(4){
+    flex:1;
+}
+
+.card-group__left>p:last-child{
+    flex:2;
+}
+
+ul{
+    padding:0;
+}
+
+li{
+    margin-left: 5%;
+}

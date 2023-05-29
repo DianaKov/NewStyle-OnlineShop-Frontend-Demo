@@ -1,0 +1,31 @@
+.product-card{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid var(--footer-background-color);
+}
+
+.product-image{
+    width:100px;
+    padding-bottom: 1%;
+}
+
+.product-cardbody{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.shoppingCard-btn{
+    background: none;
+    border: none;
+}
+
+.trash-icon{
+    color:red;
+}
+
+.product-cardbody .card-btn{
+    position: relative;
+    width: 15%;
+    margin-top: 2%;
+}

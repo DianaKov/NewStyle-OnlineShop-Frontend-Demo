@@ -21,7 +21,6 @@ const ModalResetPassword = ({ show, onClose }) => {
     setShowPassword(!showPassword);
   }
 
-
   return (
     <>
       <Modal show={show && !successShown} onHide={onClose}>
