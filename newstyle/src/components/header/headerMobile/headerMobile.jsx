@@ -21,10 +21,10 @@ function HeaderMobile() {
       <Navbar.Toggle aria-controls="navbarMenu" onClick={handleToggle}>
           <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} className={isMenuOpen ? 'icon-blue' : ''}  />
         </Navbar.Toggle>
-        <Navbar.Brand href="#" className={isMenuOpen ? 'text-blue' : ''}>NEW STYLE</Navbar.Brand>
+        <Navbar.Brand href="/" className={isMenuOpen ? 'text-blue' : ''}>NEW STYLE</Navbar.Brand>
         <Nav className="ms-row">
-            <Nav.Link href="#"><FontAwesomeIcon icon={faHeart} className={isMenuOpen ? 'icon-blue' : ''} /></Nav.Link>
-            <Nav.Link href="#"><FontAwesomeIcon icon={faShoppingCart} className={isMenuOpen ? 'icon-blue' : ''} /></Nav.Link>
+            <Nav.Link href="/favorites"><FontAwesomeIcon icon={faHeart} className={isMenuOpen ? 'icon-blue' : ''} /></Nav.Link>
+            <Nav.Link href="/shoppingCart"><FontAwesomeIcon icon={faShoppingCart} className={isMenuOpen ? 'icon-blue' : ''} /></Nav.Link>
           </Nav>
           </Container>
           <Container className="new-backgraund">  
@@ -44,14 +44,15 @@ function HeaderMobile() {
 
           <Nav>
           <MyModal> </MyModal>
-            <Nav.Link href="#">NEW</Nav.Link>
-            <Nav.Link href="#">КАТАЛОГ</Nav.Link>
-            <Nav.Link href="#">АКЦИИ</Nav.Link>
+            <Nav.Link href="/catalog?category=new_arrival">NEW</Nav.Link>
+            <Nav.Link href="/catalog">КАТАЛОГ</Nav.Link>
+            <Nav.Link href="/catalog?category=sale">АКЦИИ</Nav.Link>
           </Nav>
           <Nav className="me-auto mb-2 mb-lg-0">
-            <Nav.Link href="#">ОПЛАТА И ДОСТАВКА</Nav.Link>
-            <Nav.Link href="#">УСЛОВИЯ ВОЗВРАТА</Nav.Link>
-            <Nav.Link href="#">КОНТАКТЫ</Nav.Link>
+          <Nav.Link href="/about">О НАС</Nav.Link>
+            <Nav.Link href="/payment">ОПЛАТА И ДОСТАВКА</Nav.Link>
+            <Nav.Link href="/return-conditions">УСЛОВИЯ ВОЗВРАТА</Nav.Link>
+            <Nav.Link href="/contact">КОНТАКТЫ</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

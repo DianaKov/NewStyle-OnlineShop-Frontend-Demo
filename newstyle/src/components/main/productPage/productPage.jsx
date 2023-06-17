@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Footer from '../../footer/footer';
-import Header from '../../header/headerDesktop/header';
 import Breadcrumbs from '../breadcrumbs/breadcrumbs';
 import { salePercentage, colorMap } from '../../constants';
 import ProductItem from './productItem';
 
 import './productPage.css'
 import ViewedProducts from './viewedProducts';
+import NewHeader from '../../header/header';
 
 function ProductPage() {
   const { productName } = useParams();
@@ -105,7 +105,7 @@ function ProductPage() {
 
   return (
     <>
-      <Header />
+      <NewHeader />
       <Breadcrumbs/>
       <div className='productPage'>
           <ProductItem

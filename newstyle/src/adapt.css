@@ -1,0 +1,174 @@
+@media screen and (max-width: 991px) {
+
+    .filterProducts__right {
+        width: 80%;
+    }
+
+    .navbar-brand {
+        margin-left: -20%;
+    }
+
+    .productPage .mb-4 {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .productPage--left {
+        width: 80%;
+    }
+
+    .slider {
+        height: 40vh;
+    }
+
+    .logo {
+        left: 30%;
+        top: 7%;
+    }
+
+    .card-sale {
+        flex-direction: column;
+        height: 70vh;
+    }
+
+    .card-img__sale {
+        font-size: 16px;
+    }
+
+    .card-sale__left h2 {
+        font-size: 24px;
+    }
+
+    .card-sale__left div {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .form-control {
+        width: 90%;
+    }
+
+    .mailingList-container {
+        padding: 2%;
+        display: block;
+    }
+
+    .mailingList-container h2{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .mailingList-form {
+        width: 100%;
+        display: block;
+    }
+
+    .mailingList-btn {
+        width: 120px
+    }
+
+    .mailingList-form__btn {
+        justify-content: center;
+    }
+
+    h4{
+        font-size: 1rem;
+    }
+
+    #cardCategory{
+        display: grid;
+    }
+
+    .row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .col-md-4 {
+        max-width: max-content;
+    }
+
+    .filterProducts__right {
+        width: 80%;
+    }
+
+    .profile-card>a>img{
+        width:90%;
+    }
+
+    .favorite-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .productPage .mb-4 {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .productPage--left {
+        width: 80%;
+    }
+
+    .productPage--left .card-img__sale {
+        width: 16%;
+        height: 9%;
+        top: 5%;
+        left: 45%;
+    }
+
+    .card-group {
+        flex-direction: column;
+    }
+
+    .card-group__left {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-link {
+        padding-top: 1%;
+    }
+
+    .footer-links {
+        margin-bottom: 7%;
+    }
+
+}
+
+
+
+@media screen and (min-width: 992px) and (max-width: 1440px) {
+
+    .slider {
+        height: 50vh;
+    }
+
+    .card-sale__left h2 {
+        font-size: 24px;
+    }
+
+    .form-control {
+        width: 80%;
+    }
+
+    .mailingList-btn {
+        width: 170px;
+    }
+
+    .mailingList-container {
+        padding: 2%;
+    }
+
+    .mailingList-form {
+        width: 80%;
+    }
+
+    .card-img__sale {
+        font-size: 16px;
+    }
+
+    .profile-card>a>img{
+        width:90%;
+    }
+}

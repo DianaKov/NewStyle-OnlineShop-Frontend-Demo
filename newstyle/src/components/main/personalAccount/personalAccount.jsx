@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Header from '../../header/headerDesktop/header';
+import NewHeader from '../../header/header';
 import Footer from '../../footer/footer';
 import Breadcrumbs from '../breadcrumbs/breadcrumbs';
 
@@ -35,30 +35,9 @@ function PersonalAccount() {
         window.location.href = '/';
       }; 
 
-/*function handleLogout() {
-  fetch('http://localhost:8080/api/logout', {
-    method: 'POST',
-    credentials: 'include' 
-  })
-    .then(response => {
-      if (response.ok) {
-        localStorage.removeItem('email');
-        localStorage.removeItem('password');
-        setIsAuthenticated(false);
-        window.location.href = '/';
-      } else {
-        throw new Error('Ошибка выхода');
-      }
-    })
-    .catch(error => {
-      console.error('Произошла ошибка выхода:', error);
-    });
-}*/
-
-  
     return (
       <>
-        <Header />
+        <NewHeader/>
         <Breadcrumbs path={pathname}/>
         {user && (
             <div className="card">

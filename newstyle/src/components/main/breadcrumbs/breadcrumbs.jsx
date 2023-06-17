@@ -20,6 +20,7 @@ function Breadcrumbs({ includeCatalog, category }) {
     '/shoppingCart': 'Корзина',
     '/favorites': 'Избранное',
     '/personalAccount': 'Личный кабинет',
+    '/contact/privacy-policy-terms' : 'Политика конфиденциальности',
   };
 
   if (category) {

@@ -5,7 +5,8 @@
     position: relative;
     width: 400px;
     height: 400px;
-    margin: 5% 30%;
+    left: 35%;
+    top: 15%;
   }
 
   .circle-left {
@@ -461,14 +462,12 @@ position: absolute;
       
   
       
-      /* Добавьте ваш стиль анимации для логотипа */
-      
       .slide-2 {
-        background-color: #fff; /* установите цвет фона вашего второго слайда */
+        background-color: #fff; 
       }
       
       .slide-2 img, .slide-3 img, .slide-4 img {
         width: 100%;
-        height: auto;
+        height: 100%;
       }
       

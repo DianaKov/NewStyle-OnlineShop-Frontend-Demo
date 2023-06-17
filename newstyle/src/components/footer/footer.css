@@ -38,3 +38,31 @@
     position: fixed;
     bottom: 0;
 }
+
+.footerMobile{
+    background-color: var(--footer-background-color);
+    padding: 2% 0;
+    text-align: center;
+}
+
+.arrow-up::after {
+    content: '\25B2'; 
+    margin-left: 5px;
+    color: var(--hover-btn);
+  }
+  
+  .arrow-down::after  {
+    content: '\25BC'; 
+    margin-left: 5px;
+    color: var(--hover-btn);
+  }
+  
+.footerMobile p:last-child{
+    margin-top: 5%;
+    margin-bottom: 0;
+}
+
+.footerMobile p{
+    line-height: 16px;
+    margin-bottom: 2%;
+}

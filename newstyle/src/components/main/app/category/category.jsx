@@ -13,7 +13,7 @@ const ProductCategory = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/products');
+      const response = await fetch('http://localhost:8088/api/products');
       const data = await response.json();
       setProducts(data);
     } catch (error) {
@@ -43,7 +43,7 @@ const ProductCategory = () => {
   };
 
   return (
-    <div className="card">
+    <div className="card" id="cardCategory">
       <h1 className="card-name">Категории</h1>
       <Row>
         {filterProducts().map((product) => (

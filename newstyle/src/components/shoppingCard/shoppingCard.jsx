@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash }  from '@fortawesome/free-solid-svg-icons';
 import { salePercentage, colorMap } from '../constants';
 
-import Header from '../header/headerDesktop/header';
+import NewHeader from '../header/header';
 import Footer from '../footer/footer';
 import Breadcrumbs from '../main/breadcrumbs/breadcrumbs';
 
@@ -96,7 +96,7 @@ function CartPage() {
   if (!isAuthenticated) {
     return (
       <>
-        <Header />
+        <NewHeader/>
         <Breadcrumbs/>
         <div className='noAccess'>Войдите, чтобы просмотреть корзину.</div>
         <Footer />
@@ -106,7 +106,7 @@ function CartPage() {
 
   return (
     <>
-      <Header/>
+      <NewHeader/>
       <Breadcrumbs  includeCatalog={true}/>
       <div className="card">
       {cartItems.length === 0 ? (

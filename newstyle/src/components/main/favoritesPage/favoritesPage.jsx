@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import { salePercentage, colorMap } from '../../constants';
 import { faTrash }  from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Header from '../../header/headerDesktop/header';
+import NewHeader from '../../header/header' 
 import Footer from '../../footer/footer';
 import Breadcrumbs from '../breadcrumbs/breadcrumbs';
 import ProductItem from '../productPage/productItem';
@@ -13,7 +13,7 @@ import './favorite.css'
 function FavoritesPage() {
   const [favoriteItems, setFavoriteItems] = useState([]);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems ] = useState([]);
 
   useEffect(() => {
     fetchFavoriteItems();
@@ -65,7 +65,7 @@ function FavoritesPage() {
   if (!isAuthenticated) {
     return (
       <>
-        <Header />
+        <NewHeader/>
         <Breadcrumbs/>
         <div className='noAccess'>Войдите, чтобы просмотреть избранное.</div>
         <Footer />
@@ -75,7 +75,7 @@ function FavoritesPage() {
 
   return (
     <>
-      <Header />
+      <NewHeader/>
       <Breadcrumbs/>
       <div className="card">
       {favoriteItems.length > 0 ? (

@@ -11,6 +11,7 @@ import ProductPage from './components/main/productPage/productPage';
 import CartPage from './components/shoppingCard/shoppingCard';
 import PersonalAccount from './components/main/personalAccount/personalAccount';
 import FavoritesPage from './components/main/favoritesPage/favoritesPage';
+import PrivacyPolicyTerms from './components/main/app/mailingList/privacyPolicyTerms';
 
 function Home() {
   
@@ -28,6 +29,7 @@ function Home() {
         <Route exact path="/shoppingCart" element={<CartPage />} />
         <Route exact path="/personalAccount" element={<PersonalAccount />} />
         <Route exact path="/favorites" element={<FavoritesPage />} />
+        <Route exact path="/contact/privacy-policy-terms" element={<PrivacyPolicyTerms />} />
       </Routes>
     </BrowserRouter>
   );
